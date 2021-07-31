@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&family=Ranga&display=swap');
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  height: 100px;
+  background-color: #2d2d2d;
+
+  color: white;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5rem;
+    line-height: 3.5rem;
+    font-family: Roboto;
+  }
+
+  &__heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    $width: 751px;
+    $height: 1280px;
+    $scale: 0.075;
+
+    width: $width * $scale;
+    height: $height * $scale;
+
+    transform: rotate(-6deg);
+  }
+
+  &__title {
+    $botMargin: 3px;
+    position: relative;
+    bottom: $botMargin;
+    font-size: 47px;
+    font-weight: normal;
+    font-family: Rancho;
+    // font-style: italic;
+    margin: 0;
+    padding-right: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      left: -2rem;
+
+      transform: translateY($botMargin);
+
+      $thickness: 1px;
+      background: repeating-linear-gradient(
+        hsl(0, 0%, 0%),
+        hsl(0, 0%, 0%) $thickness,
+        hsla(0, 0%, 0%, 0) $thickness,
+        hsla(0, 0%, 0%, 0) $thickness * 12
+      );
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    & li {
+      padding-right: 2rem;
+      font-size: 32px;
+
+      &:hover {
+        animation: textHover 1s forwards linear;
+      }
+
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@keyframes textHover {
+  0% {
+    color: white;
+  }
+  100% {
+    color: hsl(0, 100%, 75%);
+  }
+}

@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+
+@mixin fading_shadow($shadow_distance) {
+  $opacity_shadow: 0.03;
+
+  box-shadow: 0 0 0 $shadow_distance rgba(255, 255, 255, $opacity_shadow),
+    0 0 0 $shadow_distance * 2 rgba(255, 255, 255, $opacity_shadow - 0.01),
+    0 0 0 $shadow_distance * 3 rgba(255, 255, 255, $opacity_shadow - 0.02);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 100%;
+  user-select: none;
+  background-image: url('../images/Wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__text {
+    color: white;
+    width: 550px;
+    // height: 600px;
+    text-align: center;
+    border: 5px solid #000;
+
+    &--title {
+      font-size: 70px;
+      font-family: Rhodium Libre;
+      font-weight: normal;
+      line-height: 100px;
+
+      margin: 0;
+    }
+
+    &--sub {
+      font-family: Redressed;
+      font-size: 40px;
+      font-weight: normal;
+
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.hero__image {
+  position: relative;
+
+  &__polygon {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    top: 0;
+    right: -25%;
+    z-index: -1;
+
+    background: #000000;
+    transform: rotate(-90deg);
+
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+
+  &__circle {
+    position: absolute;
+    width: 600px;
+    height: 650px;
+    top: 50%;
+    right: -250px;
+    z-index: -1;
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: #000000;
+  }
+}
+
+.Skander {
+  width: 500px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-position: -50px -25px;
+  background-size: 115%;
+  background-repeat: no-repeat;
+  background-image: url("../images/skander.jpg");
+  // filter: grayscale(100%);
+  border: 1px solid #FFF;
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    border-radius: inherit;
+
+    @include fading_shadow(2.5rem);
+
+    transition: 1s;
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+}

@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Rancho&family=Ranga&display=swap");
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  height: 100px;
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 5rem;
+  line-height: 3.5rem;
+  font-family: Roboto;
+}
+
+.header__heading {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  width: 56.325px;
+  height: 96px;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+}
+
+.header__title {
+  position: relative;
+  bottom: 3px;
+  font-size: 47px;
+  font-weight: normal;
+  font-family: Rancho;
+  margin: 0;
+  padding-right: 10px;
+}
+
+.header__title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -2rem;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  background: repeating-linear-gradient(black, black 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 12px);
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__list li {
+  padding-right: 2rem;
+  font-size: 32px;
+}
+
+.header__list li:hover {
+  -webkit-animation: textHover 1s forwards linear;
+          animation: textHover 1s forwards linear;
+}
+
+.header__list li:last-child {
+  padding: 0;
+}
+
+@-webkit-keyframes textHover {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #ff8080;
+  }
+}
+
+@keyframes textHover {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #ff8080;
+  }
+}
+/*# sourceMappingURL=Header.css.map */
