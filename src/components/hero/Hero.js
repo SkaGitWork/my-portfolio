@@ -6,13 +6,14 @@ function Hero() {
   return (
     <div className="hero">
       <div className="hero__text">
-        <h1 className="hero__text--title">
-          Hello, I'm Skander. Make yourself at home
-        </h1>
+        <h1 className="hero__text--title">Hello, I'm</h1>
+        <h1 className="hero__text--title">Iskander. Make</h1>
+        <h1 className="hero__text--title">yourself at home</h1>
         <h3 className="hero__text--sub">
           Im a web developer ready to make your dream website
         </h3>
       </div>
+      <a className="discover-btn">Discover</a>
 
       {/* <div className="hero__image">
         <div className="Skander"></div>
@@ -21,5 +22,6 @@ function Hero() {
     </div>
   )
 }
+
 
 export default Hero

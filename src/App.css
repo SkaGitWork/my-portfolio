@@ -15,4 +15,8 @@ li {
   display: flex;
   flex-direction: column;
 
+   background-image: url("components/images/Wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }

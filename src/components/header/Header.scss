@@ -7,8 +7,6 @@ a {
 
 .header {
   height: 100px;
-  background-color: #2d2d2d;
-
   color: white;
 
   &__container {
@@ -34,7 +32,20 @@ a {
     width: $width * $scale;
     height: $height * $scale;
 
-    transform: rotate(-6deg);
+    // transform: translateX(0px) rotate(6deg);
+    // &:hover{
+
+    //   animation: move 3s both infinite linear alternate;
+    // }
+
+    @keyframes move {
+      from{
+ transform: translateX(0px);
+      }
+      to{
+ transform: translateX(200px);
+      }
+    }
   }
 
   &__title {
@@ -47,8 +58,9 @@ a {
     // font-style: italic;
     margin: 0;
     padding-right: 10px;
+    z-index: 1;
 
-    &::after {
+    &a::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -63,6 +75,7 @@ a {
         hsla(0, 0%, 0%, 0) $thickness,
         hsla(0, 0%, 0%, 0) $thickness * 12
       );
+      z-index: -1;
     }
   }
 
@@ -71,7 +84,7 @@ a {
 
     & li {
       padding-right: 2rem;
-      font-size: 32px;
+      font-size: 20px;
 
       &:hover {
         animation: textHover 1s forwards linear;

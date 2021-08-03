@@ -8,7 +8,7 @@ function Header() {
       <div className="header__container">
         <div className="header__heading">
           <img src={music_key} className="header__logo" alt="" />
-          <h1 className="header__title">Skander</h1>
+          <h1 className="header__title">Iskander</h1>
           {/* <div className="header__lines"></div> */}
         </div>
         <nav className="header__nav">
