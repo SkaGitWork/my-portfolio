@@ -1,4 +1,15 @@
 /* --------------------------------- Global --------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georama&display=swap');
+
+html{
+    scroll-behavior: smooth;
+
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,11 +17,7 @@ body {
   background-color: #36364B;
 }
 
-li {
-  list-style: none;
-}
-
-.container{
+.first-page-container{
   height: 100vh;
   display: flex;
   flex-direction: column;

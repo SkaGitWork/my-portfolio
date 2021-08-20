@@ -1,0 +1,31 @@
+{
+  "tabs": [
+    {
+      "name": "WorkSection",
+      "files": [
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/thumbnail/thumbnail.scss",
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/project/project.scss",
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/work/work.scss",
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/work/work.js",
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/thumbnail/Thumbnail.js",
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/project/Project.js",
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/work/workData.js"
+      ]
+    },
+    {
+      "name": "About me section",
+      "files": [
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/aboutMe/AboutMe.js",
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/aboutMe/aboutMe.scss",
+        "file:///c%3A/Users/Gamer/my-portfolio/src/App.js"
+      ]
+    },
+    {
+      "name": "Footer Section",
+      "files": [
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/footer/footer.scss",
+        "file:///c%3A/Users/Gamer/my-portfolio/src/components/footer/Footer.js"
+      ]
+    }
+  ]
+}

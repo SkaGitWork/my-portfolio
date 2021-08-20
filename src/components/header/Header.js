@@ -6,21 +6,20 @@ function Header() {
   return (
     <header className="header">
       <div className="header__container">
-        <div className="header__heading">
+        <a href="#home" className="header__heading">
           <img src={music_key} className="header__logo" alt="" />
           <h1 className="header__title">Iskander</h1>
-          {/* <div className="header__lines"></div> */}
-        </div>
+        </a>
         <nav className="header__nav">
           <ul className="header__list">
             <li>
-              <a href="#">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
             <li>
-              <a href="#">About me</a>
+              <a href="#about-me">About me</a>
             </li>
             <li>
-              <a href="#">My projects</a>
+              <a href="#my-projects">My projects</a>
             </li>
           </ul>
         </nav>

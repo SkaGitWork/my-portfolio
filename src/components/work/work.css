@@ -1,0 +1,17 @@
+.work {
+  width: 95%;
+  margin: auto;
+}
+
+.work__title {
+  color: white;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 3px;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.work .thumbnail:nth-child(n + 2) {
+  float: right;
+}
+/*# sourceMappingURL=work.css.map */

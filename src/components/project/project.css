@@ -1,0 +1,42 @@
+.project {
+  margin-top: 5%;
+  height: 50vh;
+}
+
+.project__title {
+  color: white;
+  text-align: center;
+}
+
+.project__text {
+  line-height: 2.3rem;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.project__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project__info__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+/*# sourceMappingURL=project.css.map */

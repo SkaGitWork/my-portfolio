@@ -1,13 +1,20 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
+import "./thumbnail.css"
+import { HiCursorClick } from "react-icons/hi"
 
 class Thumbnail extends Component {
-  state = {}
-  render() { 
-    console.log("props", this.props);
+  render() {
     return (
-      <img className="thumbnail"></img>
-    );
+      <a href={this.props.url}>
+        <div
+          className="thumbnail"
+          style={{ backgroundImage: `url(${this.props.src})` }}
+        >
+          <HiCursorClick className="click" />
+        </div>
+      </a>
+    )
   }
 }
- 
-export default Thumbnail;
+
+export default Thumbnail

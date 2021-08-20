@@ -1,0 +1,82 @@
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(100vh - 90px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "STIX Two Text", serif;
+}
+
+.footer__title {
+  color: #e7e7e7;
+  font-size: 3rem;
+}
+
+.contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40%;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.contact-list li:nth-child(2) a {
+  background-color: #fff7d6;
+  background-color: #dbefee;
+  background-color: #65492B;
+  background-color: #464555;
+  background-color: #7C492D;
+  background-color: #775D84;
+  background-color: #D2D1EC;
+  color: #000;
+}
+
+.contact-list a {
+  display: block;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: #00c6c3;
+  background-color: #348b89;
+  background-color: #005B65;
+  background-color: #AAA9BC;
+  background-color: #0F6956;
+  background-color: #965454;
+  background-color: #807F97;
+  color: white;
+  font-family: "STIX Two Text", serif;
+  font-size: 1.2rem;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.contact-list a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.contact-list svg {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=footer.css.map */

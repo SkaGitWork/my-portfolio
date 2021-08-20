@@ -1,0 +1,97 @@
+.about-me-section {
+  position: relative;
+  display: grid;
+  grid-template-rows: 30% 60%;
+  column-gap: 10rem;
+
+  padding: 3rem 0;
+  height: calc(100vh - 90px);
+
+  overflow: hidden;
+
+  &__title {
+    grid-column: 1/3;
+
+    margin-bottom: 0;
+
+    color: white;
+    text-align: center;
+    font-family: "STIX Two Text", serif;
+    font-size: 3rem;
+  }
+}
+
+.about-me--container {
+  grid-row-start: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // width: 40%;
+  height: 100%;
+  // aspect-ratio: 1/1;
+
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: hsl(0, 30%, 50%);
+
+  font-family: "STIX Two Text", serif;
+  line-height: 2.2rem;
+
+  transition: transform 1.5s 2s;
+}
+
+.about-me {
+  margin-bottom: 2rem;
+  margin-left: 5rem;
+  padding: 0.5rem;
+  transform: translateY(-200%);
+
+  &__title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+.skills {
+  margin-right: 5rem;
+  padding: 0.5rem;
+
+  transform: translateY(200%);
+}
+
+/* -------------------------------- Animation ------------------------------- */
+.is-visible {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(to top left, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+    clip-path: polygon(0 0, 5% 0, 0 5%);
+
+    transition: all 6s linear;
+    animation: aboutMeAnimation 3s both;
+  }
+
+  @keyframes aboutMeAnimation {
+    from {
+      clip-path: polygon(0 0, 5% 0, 0 5%);
+    }
+    to {
+      clip-path: polygon(0 0, 200% 0, 0 200%);
+    }
+  }
+}
+
+.show-on-scroll.is-visible .slide-in {
+  transform: translate(0);
+}

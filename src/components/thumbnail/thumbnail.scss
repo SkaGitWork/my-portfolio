@@ -1,4 +1,42 @@
-.thumbnail{
+.thumbnail {
+  position: relative;
   width: 400px;
   height: 300px;
+  filter: grayscale(25%);
+  float: left;
+  transition: transform 0.5s, filter 0.5s;
+  padding: 0 2rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+  }
+
+  & svg{
+    opacity: 0;
+    transform: scale(2);
+    color: hsl(0, 0%, 90%);
+    transition: opacity 0.5s;
+  }
+
+  &:hover svg{
+   display: block;
+   opacity: 1;
+  }
+
+}
+
+.project:nth-of-type(2n + 0) .thumbnail {
+  float: right;
+}
+.project:nth-child(3) .project__text {
+  height: 250px;
+  overflow: scroll;
 }
