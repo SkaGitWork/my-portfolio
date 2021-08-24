@@ -1,6 +1,6 @@
- name: Github Pages Deploy
+name: Github Pages Deploy
 
- on:
+on:
   push:
     branches:
       - "master"
