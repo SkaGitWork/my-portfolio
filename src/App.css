@@ -15,10 +15,12 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #36364B;
+  overflow-x: hidden;
 }
 
 .first-page-container{
-  height: 100vh;
+  height: calc(100vh + 100px);
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -26,4 +28,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 
+}
+
+.title{
+  color: white;
+    text-align: center;
+    font-family: "STIX Two Text", serif;
+    font-size: 3rem;
 }

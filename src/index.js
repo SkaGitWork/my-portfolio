@@ -44,3 +44,4 @@ const targets = document.querySelectorAll(".show-on-scroll")
 targets.forEach(function (target) {
   appearOnScroll.observe(target)
 })
+

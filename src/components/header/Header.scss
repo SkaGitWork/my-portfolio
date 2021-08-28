@@ -59,29 +59,16 @@ a {
     margin: 0;
     padding-right: 10px;
     z-index: 1;
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   inset: 0;
-    //   left: -2rem;
-
-    //   transform: translateY($botMargin);
-
-    //   $thickness: 1px;
-    //   background: repeating-linear-gradient(
-    //     hsl(0, 0%, 0%),
-    //     hsl(0, 0%, 0%) $thickness,
-    //     hsla(0, 0%, 0%, 0) $thickness,
-    //     hsla(0, 0%, 0%, 0) $thickness * 12
-    //   );
-    //   z-index: -1;
-    // }
   }
 
   &__list {
     display: flex;
     list-style: none;
+
+    @media screen and (max-width: 768px){
+      display: none;
+    
+    }
 
     & li {
       padding-right: 2rem;

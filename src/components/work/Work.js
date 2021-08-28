@@ -17,6 +17,7 @@ class work extends Component {
 
       all.push(
         <Project
+          key={project.name}
           name={project.name}
           imageSrc={project.imageSrc}
           urlLive={project.urlLive}
@@ -32,7 +33,11 @@ class work extends Component {
   render() {
     return (
       <div className="work" id="my-projects">
-        <h1 className="work__title" id="startSticky">My latest work</h1>
+        
+
+        <h1 className="work__title" id="startSticky">
+          My latest work
+        </h1>
         {this.renderProjects()}
         <h1 className="work__title work__title--progress">Work in progress</h1>
       </div>

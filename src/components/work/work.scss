@@ -1,7 +1,6 @@
 .work {
-  width: 95%;
+  position: relative;
   margin: auto;
-  // padding-top: 10rem;
 
   &__title {
     color: white;
@@ -9,9 +8,9 @@
     letter-spacing: 3px;
     font-size: 3rem;
     text-align: center;
+    margin: 0;
   }
 
-  & .thumbnail:nth-child(n + 2) {
-    float: right;
-  }
 }
+
+

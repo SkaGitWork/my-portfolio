@@ -1,5 +1,5 @@
 .work {
-  width: 95%;
+  position: relative;
   margin: auto;
 }
 
@@ -9,9 +9,6 @@
   letter-spacing: 3px;
   font-size: 3rem;
   text-align: center;
-}
-
-.work .thumbnail:nth-child(n + 2) {
-  float: right;
+  margin: 0;
 }
 /*# sourceMappingURL=work.css.map */

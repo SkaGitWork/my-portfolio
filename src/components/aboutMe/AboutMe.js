@@ -2,15 +2,14 @@ import React, { Component } from "react"
 import "./aboutMe.css"
 
 class AboutMe extends Component {
-  state = {}
   render() {
     return (
-      <>
-        <section className="about-me-section show-on-scroll" id="about-me">
-        <h1 className="about-me-section__title">
-          About Iskander
-        </h1>
-          <div className="about-me about-me--container slide-in">
+      <div className="about-me-bg show-on-scroll">
+        <div className="anchor" id="about-me"></div>
+        <div className="about-me__custom-shape about-me__custom-shape--top"></div>
+        <section className="about-me-section">
+          <h1 className="about-me-section__title title">About Iskander</h1>
+          <div className="about-me about-me__text-container slide-in">
             <h1 className="about-me__title">About me</h1>
             <p className="about-me__text">
               My name is Iskander, im 21 years old and I live in Tunisia, my
@@ -19,7 +18,7 @@ class AboutMe extends Component {
               wish to help people creating their website.
             </p>
           </div>
-          <div className="skills about-me--container slide-in">
+          <div className="skills about-me__text-container slide-in">
             <h1 className="about-me__title">My skills</h1>
             <p className="about-me__text">
               I started with Python building algorithms then I decided to turn
@@ -28,7 +27,8 @@ class AboutMe extends Component {
             </p>
           </div>
         </section>
-      </>
+        <div className="about-me__custom-shape about-me__custom-shape--bot"></div>
+      </div>
     )
   }
 }

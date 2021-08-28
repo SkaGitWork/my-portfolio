@@ -1,17 +1,11 @@
-@mixin fading_shadow($shadow_distance) {
-  $opacity_shadow: 0.03;
-
-  box-shadow: 0 0 0 $shadow_distance rgba(255, 255, 255, $opacity_shadow),
-    0 0 0 $shadow_distance * 2 rgba(255, 255, 255, $opacity_shadow - 0.01),
-    0 0 0 $shadow_distance * 3 rgba(255, 255, 255, $opacity_shadow - 0.02);
-}
-
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   flex-basis: 100%;
+
+  max-height: calc(100vh - 88px);
 
   user-select: none;
 
@@ -32,6 +26,7 @@
 
     &--title {
       font-size: 70px;
+      font-size: Min(calc(50px + 1vw), 70px);
       font-family: Rhodium Libre;
       font-weight: normal;
       line-height: 100px;
@@ -58,66 +53,6 @@
         opacity: 1;
       }
     }
-  }
-}
-
-.hero__image {
-  position: relative;
-
-  // &__polygon {
-  //   position: absolute;
-  //   width: 600px;
-  //   height: 500px;
-  //   top: 0;
-  //   right: -25%;
-  //   z-index: -1;
-
-  //   background: #000000;
-  //   transform: rotate(-90deg);
-
-  //   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-  // }
-
-  // &__circle {
-  //   position: absolute;
-  //   width: 600px;
-  //   height: 650px;
-  //   top: 50%;
-  //   right: -250px;
-  //   z-index: -1;
-  //   transform: translateY(-50%);
-
-  //   border-radius: 50%;
-
-  //   background: #000000;
-  // }
-}
-
-.Skander {
-  width: 500px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  background-position: -50px -25px;
-  background-size: 115%;
-  background-repeat: no-repeat;
-  background-image: url("../images/skander.jpg");
-  // filter: grayscale(100%);
-  border: 1px solid #fff;
-
-  &::after {
-    position: absolute;
-    inset: 0;
-    content: "";
-    border-radius: inherit;
-
-    @include fading_shadow(2.5rem);
-
-    transition: 1s;
-    opacity: 0;
-  }
-
-  &:hover::after {
-    opacity: 1;
   }
 }
 
@@ -166,10 +101,9 @@
     bottom: -1px;
     width: 0;
     height: 0;
-    border: 3px solid #383838;
-    border-top: 0;
-    animation: borderAppearanceWidth $duration $delay both linear,
-      borderAppearanceHeight $duration($duration + $delay) both linear;
+
+    animation: borderAppearanceWidth $duration $delay forwards linear,
+      borderAppearanceHeight $duration($duration + $delay) forwards linear;
   }
 
   & .top-border {
@@ -195,9 +129,13 @@
 
   @keyframes borderAppearanceWidth {
     from {
+      border: 3px solid #383838;
+      border-top: 0;
       width: 0;
     }
     to {
+      border: 3px solid #383838;
+      border-top: 0;
       width: 100%;
     }
   }
@@ -241,3 +179,13 @@
     }
   }
 }
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 300px;
+
+  background-image: url("../images/wave-haikei (3).svg");
+
+ }

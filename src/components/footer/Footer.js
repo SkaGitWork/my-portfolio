@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import "./footer.css"
 import { AiOutlineMail, AiFillGithub } from "react-icons/ai"
-import { FaDiscord } from "react-icons/fa"
+import { SiFiverr } from "react-icons/si"
 
 class Footer extends Component {
   state = {}
@@ -14,6 +14,7 @@ class Footer extends Component {
             <a
               href="mailto:denguezli.iskander@gmail.com"
               target="_blank"
+              rel="noreferrer"
               title="Email"
             >
               <AiOutlineMail /> <span>My E-mail</span>
@@ -23,14 +24,18 @@ class Footer extends Component {
             <a
               href="https://github.com/SkaGitWork"
               target="_blank"
+              rel="noreferrer"
               title="Github"
             >
               <AiFillGithub /> <span>My Github</span>
             </a>
           </li>
           <li>
-            <a href="#" title="Discord">
-              <FaDiscord /> <span>My Discord</span>
+            <a
+              href="https://fr.fiverr.com/iskanderdenguez?up_rollout=true"
+              title="Fiverr"
+            >
+              <SiFiverr /> <span>My Fiverr</span>
             </a>
           </li>
         </ul>
