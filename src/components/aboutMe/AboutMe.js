@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import squircle from "../images/squircle about me.svg"
 import "./aboutMe.css"
 
 class AboutMe extends Component {
@@ -9,7 +10,8 @@ class AboutMe extends Component {
         <div className="about-me__custom-shape about-me__custom-shape--top"></div>
         <section className="about-me-section">
           <h1 className="about-me-section__title title">About Iskander</h1>
-          <div className="about-me about-me__text-container slide-in">
+          <div className="about-me about-me__text-container slide-in--1">
+            <img src={squircle} className="squircle" alt=""></img>
             <h1 className="about-me__title">About me</h1>
             <p className="about-me__text">
               My name is Iskander, im 21 years old and I live in Tunisia, my
@@ -18,7 +20,8 @@ class AboutMe extends Component {
               wish to help people creating their website.
             </p>
           </div>
-          <div className="skills about-me__text-container slide-in">
+          <div className="skills about-me__text-container slide-in--2">
+            <img src={squircle} className="squircle" alt=""></img>
             <h1 className="about-me__title">My skills</h1>
             <p className="about-me__text">
               I started with Python building algorithms then I decided to turn

@@ -44,6 +44,8 @@
 }
 
 .about-me__text-container {
+  position: relative;
+
   grid-row-start: 2;
 
   display: flex;
@@ -54,8 +56,7 @@
 
   font-size: clamp(10px, 1vw, 1rem);
 
-  transition: transform 1.5s 2s;
-  transform-origin: center;
+  transition: position 1.5s 2s;
 
   & h1,
   p {
@@ -68,7 +69,7 @@
 
   & h1 {
     font-size: 2.2em;
-    margin-bottom: 2rem;
+    margin-bottom: clamp(0px, 1vw, 2rem);
   }
   & p {
     font-size: 1.5em;
@@ -77,31 +78,22 @@
 }
 
 .about-me {
-  background-image: url("../images/squircle about me.svg");
-  background-position: 6rem -1rem;
-  background-size: 75vw;
+  position: absolute;
+  bottom: 200%;
+  right: 50%;
+}
 
-  // background-size: 90vw;
-  // background-position: 0rem -1rem;
-
-  transform: translateY(-200%);
-  & * {
-    transform: translateY(4rem) scale(1vw);
-    // transform: translate(3rem, 0);
-
-  }
+.squircle {
+  position: absolute;
+  z-index: -1;
+  width: 35vw;
+  min-width: 300px;
 }
 
 .skills {
-  background-image: url("../images/squircle skills.svg");
-  background-position: 3rem 1rem;
-  background-size: 150vw;
-
-  transform: translateY(200%);
-
-  & * {
-    transform: translateY(8rem);
-  }
+  position: absolute;
+  left: 50%;
+  bottom: -200%;
 }
 
 /* -------------------------------- Animation ------------------------------- */
@@ -135,6 +127,34 @@
   }
 }
 
-.show-on-scroll.is-visible .slide-in {
-  transform: translate(0);
+.show-on-scroll.is-visible .slide-in--1 {
+  animation: bounceTop 2.5s 2s both ease-out;
+}
+
+.show-on-scroll.is-visible .slide-in--2 {
+  animation: bounceBottom 2.5s 2s both ease-out;
+}
+
+@keyframes bounceBottom {
+  0% {
+    bottom: -200%;
+  }
+  80% {
+    bottom: 5rem;
+  }
+  100% {
+    bottom: 3rem;
+  }
+}
+
+@keyframes bounceTop {
+  0% {
+    bottom: 200%;
+  }
+  80% {
+    bottom: 0rem;
+  }
+  100% {
+    bottom: 3rem;
+  }
 }
