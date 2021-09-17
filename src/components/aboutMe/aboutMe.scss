@@ -11,10 +11,13 @@
   font: none;
 }
 
+// Waves
 .about-me__custom-shape {
   position: absolute;
   width: 100vw;
   height: 100px;
+
+  z-index: 3;
 
   background-image: url("../images/wave.svg");
 
@@ -26,6 +29,8 @@
     transform: rotate(180deg);
   }
 }
+
+
 
 .about-me-section {
   position: relative;

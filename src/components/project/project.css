@@ -19,6 +19,10 @@
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+  .project:nth-child(3) .project__text {
+    height: 250px;
+    overflow: scroll;
+  }
 }
 
 @media screen and (max-width: 1024px) {

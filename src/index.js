@@ -45,3 +45,24 @@ targets.forEach(function (target) {
   appearOnScroll.observe(target)
 })
 
+/* ------------------------------ Show or hide ------------------------------ */
+function showOrHide(element) {
+  // Show
+  if (element.classList.contains("box-hidden")) {
+    element.classList.add("box-transition")
+    // element.clientWidth
+    element.classList.remove("box-hidden")
+  } else {
+    // Hide
+    element.classList.add("box-transition")
+    element.classList.add("box-hidden")
+  }
+
+  element.addEventListener(
+    "transitionend",
+    function () {
+      element.classList.remove("box-transition")
+    },
+    false
+  )
+}

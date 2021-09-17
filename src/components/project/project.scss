@@ -7,24 +7,26 @@
     justify-content: space-between;
   }
 
-  @media screen and (min-width: 1025px){
-  
+  @media screen and (min-width: 1025px) {
     &:nth-of-type(2n + 0) .project__flex-layout {
       flex-direction: row-reverse;
+
     }
+      &:nth-child(3) .project__text {
+        height: 250px;
+        overflow: scroll;
+      }
   }
 
-    @media screen and (max-width: 1024px){
-      .project__flex-layout{
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
+  @media screen and (max-width: 1024px) {
+    .project__flex-layout {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
 
-
-        text-align: center;
-      }
+      text-align: center;
     }
-
+  }
 
   &__text__container {
     width: 100%;

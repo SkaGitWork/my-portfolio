@@ -1,19 +1,13 @@
 .hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 60% 20% 20%;
+      grid-template-rows: 60% 20% 20%;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  max-height: calc(100vh - 88px);
+  height: calc(100vh - 88px);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -21,6 +15,8 @@
 }
 
 .hero__text {
+  -ms-flex-item-align: center;
+      align-self: center;
   position: relative;
   color: white;
   text-align: center;
@@ -39,10 +35,10 @@
 
 .hero__text--title {
   font-size: 70px;
-  font-size: Min(calc(50px + 1vw), 70px);
+  font-size: clamp(40px, calc(30px + 3vw + 1vh), 70px);
   font-family: Rhodium Libre;
   font-weight: normal;
-  line-height: 100px;
+  line-height: clamp(40px, calc(30px + 3vw), 70px);
   margin: 0;
   overflow: hidden;
 }
@@ -77,13 +73,16 @@
 
 /* ---------------------------- Discover button ---------------------------- */
 .discover-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
   border: 2px solid #ff6a00;
-  margin-bottom: 3rem;
   background-color: rgba(255, 255, 0, 0);
   color: #ff6a00;
   font-size: 3rem;
-  padding: 10px;
   font-family: "Georama", sans-serif;
+  padding: 10px;
   -webkit-transition: color 1s, border 1s;
   transition: color 1s, border 1s;
   -webkit-animation: discoverShow 1s 7.5s both;
@@ -254,8 +253,33 @@
 .hero-wave {
   position: absolute;
   bottom: 0;
-  width: 100vw;
-  height: 300px;
-  background-image: url("../images/wave-haikei (3).svg");
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.hero-wave svg {
+  position: relative;
+  display: block;
+  width: 125%;
+  height: 101px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.hero-wave .shape-fill {
+  fill: #36364b;
+}
+
+@media screen and (max-width: 768px) {
+  .discover-btn {
+    display: none;
+  }
+  .quote {
+    width: 75%;
+  }
 }
 /*# sourceMappingURL=Hero.css.map */

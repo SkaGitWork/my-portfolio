@@ -1,0 +1,21 @@
+@media screen and (max-width: 768px) {
+
+// Animation
+  .border-animation {
+    &::before {
+      // display: none;
+    }
+
+    & .top-border {
+      // display: none;
+    }
+}
+
+.discover-btn{
+  display: none;
+}
+
+.quote {
+  width: 75%;
+}
+}

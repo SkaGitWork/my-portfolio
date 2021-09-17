@@ -44,9 +44,4 @@
   display: block;
   opacity: 1;
 }
-
-.project:nth-child(3) .project__text {
-  height: 250px;
-  overflow: scroll;
-}
 /*# sourceMappingURL=thumbnail.css.map */
